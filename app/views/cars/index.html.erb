@@ -1,6 +1,6 @@
 <div class = container>
   <div class = banner1>
-    <h1>Liste des Cars</h1>
+    <h1>Liste des Cars disponibles </h1>
   </div>
     <% @cars.each do |car| %>
       <div class = card-trip>
@@ -9,7 +9,7 @@
         <h2>tarif    :  <%= car.tarif %>€</h2>
         <%= link_to 'car details', car_path(car), class: 'btn btn-gradient' %>
         <%= link_to 'Edit', edit_car_path(car), class: 'btn btn-gradient' %>
-      </div>
+    </div>
 
     <% end %>
 

@@ -1,0 +1,12 @@
+<h1><%= @car.name %> </h1>
+<h1><%= current_user.id %> </h1>
+<%= simple_form_for [ @car, @booking ] do |f| %>
+  <%= f.input :duree, label: "duree location" %>
+  <% @booking.user_id = current_user.id %>
+  <%= f.submit "Submit booking", class: "btn btn-primary" %>
+<% end %>
+<%= link_to 'ne pas enregistrer', cars_path, class: 'btn btn-gradient'  %>
+<div class = card-choice>
+  <%= link_to 'ne pas enregistrer', cars_path, class: 'btn btn-gradient'  %>
+  <%= link_to "Back to Home", root_path, class: 'btn btn-gradient' %>
+</div>

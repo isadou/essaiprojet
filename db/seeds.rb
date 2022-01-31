@@ -25,5 +25,11 @@ p "#{car2.name} created"
 Booking.create!(user_id: user1.id, car_id: car1.id, duree: 3)
 p "booking created"
 
+Booking.create!(user_id: user1.id, car_id: car1.id, duree: 1)
+p "booking created"
+
+Booking.create!(user_id: user1.id, car_id: car2.id, duree: 4)
+p "booking created"
+
 Booking.create!(user_id: user1.id, car_id: car2.id, duree: 1)
 p "booking created"
