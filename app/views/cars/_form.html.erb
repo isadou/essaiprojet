@@ -1,0 +1,26 @@
+<div class = container>
+  <div class = banner1>
+      <h1>Template Gestion des Cars</h1>
+  </div>
+  <div class = card-trip>
+    <%= form_for(@car) do |f| %>
+      <%= f.label :name  %>
+      <%= f.text_field :name %>
+      <br>
+      <br>
+      <%= f.label :marque %>
+      <%= f.text_field :marque %>
+      <br>
+      <br>
+      <%= f.label :annee   %>
+      <%= f.number_field :annee %>
+      <br>
+      <br>
+      <%= f.label :tarif  %>
+      <%= f.number_field :tarif %>
+      <br>
+      <br>
+      <%= f.submit 'submit car', class: 'btn btn-gradient' %>
+    <% end %>
+  </div>
+</div>

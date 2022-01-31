@@ -1,0 +1,20 @@
+<div class = container>
+  <div class = banner1>
+    <h1>Liste des Cars</h1>
+  </div>
+    <% @cars.each do |car| %>
+      <div class = card-trip>
+        <h2>name    :  <%= car.name %></h2>
+        <h2>annee     :  <%= car.annee %></h2>
+        <h2>tarif    :  <%= car.tarif %>€</h2>
+        <%= link_to 'car details', car_path(car), class: 'btn btn-gradient' %>
+        <%= link_to 'Edit', edit_car_path(car), class: 'btn btn-gradient' %>
+      </div>
+
+    <% end %>
+
+    <div class = card-choice>
+      <%= link_to 'New Car', new_car_path, class: 'btn btn-gradient' %>
+      <%= link_to "Back to Home", root_path, class: 'btn btn-gradient' %>
+    </div>
+</div>

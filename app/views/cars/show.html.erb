@@ -1,0 +1,17 @@
+<div class = container>
+  <div class = banner1>
+      <h1>Détail Car</h1>
+  </div>
+  <div class = card-trip>
+    <h2><%= @car.name %></h2>
+    <p><%= @car.marque %></p>
+    <p><%= @car.annee %></p>
+    <p><%= @car.tarif %>€</p>
+    <%= link_to 'Edit', edit_car_path(@car), class: 'btn btn-gradient'  %>
+    <%= link_to 'car delete',
+      car_path(@car), class: 'btn btn-gradient' ,
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'car list', cars_path, class: 'btn btn-gradient'  %>
+  </div>
+</div>
