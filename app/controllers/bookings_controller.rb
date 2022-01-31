@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [ :destroy ]
-
+  before_action :set_user, only: [:new, :create]
   def new
     @car = Car.find(params[:car_id])
     @booking = Booking.new
@@ -25,6 +25,10 @@ class BookingsController < ApplicationController
 private
   def set_booking
     @booking = Booking.find(params[:id])
+  end
+
+  def set_user
+    @user = current_user
   end
 
   def booking_params
